@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot
+  name="eg_rover_description_6">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.38661992415745 0.504337170599516 -0.885495293586809"
+        rpy="0 0 0" />
+      <mass
+        value="21.9558501187518" />
+      <inertia
+        ixx="0.0752569490227677"
+        ixy="0.00142070556307953"
+        ixz="1.29531988594617E-05"
+        iyy="0.17820755503312"
+        iyz="-1.79109940665844E-07"
+        izz="0.128637677707828" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_bar_to_rocker_part">
+    <inertial>
+      <origin
+        xyz="-0.000918725857865343 0.0832304537898531 -0.0119005930670613"
+        rpy="0 0 0" />
+      <mass
+        value="0.308748627193075" />
+      <inertia
+        ixx="0.00044687239184303"
+        ixy="4.21523166255905E-06"
+        ixz="3.42081987813343E-07"
+        iyy="6.50469609482496E-05"
+        iyz="-3.09903534747858E-05"
+        izz="0.000470289309245914" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_bar_to_rocker_part.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_bar_to_rocker_part.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bar_to_rocker_part"
+    type="continuous">
+    <origin
+      xyz="2.4025478208424 1.13655297354084 0.480446093957099"
+      rpy="1.5707963267949 -0.0840543003467953 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_bar_to_rocker_part" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_rocker">
+    <inertial>
+      <origin
+        xyz="2.35091117701467 0.439107018325555 -1.18782206610311"
+        rpy="0 0 0" />
+      <mass
+        value="0.787174719629345" />
+      <inertia
+        ixx="0.000666994809630536"
+        ixy="-0.00122943811392355"
+        ixz="-0.000400522360860901"
+        iyy="0.00572484548325491"
+        iyz="-0.000129201406496319"
+        izz="0.00612253885749675" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_rocker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_rocker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bar_to_rocker_to_left_rocker"
+    type="fixed">
+    <origin
+      xyz="-2.40250332942615 -0.48066852687615 1.13655297354084"
+      rpy="0 0 9.25829557298728E-05" />
+    <parent
+      link="left_bar_to_rocker_part" />
+    <child
+      link="left_rocker" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_bogie">
+    <inertial>
+      <origin
+        xyz="-0.0193408184557593 -0.0314596032232477 -0.0637929305008118"
+        rpy="0 0 0" />
+      <mass
+        value="0.454623116483445" />
+      <inertia
+        ixx="0.000261881391134114"
+        ixy="-7.54087304186821E-05"
+        ixz="-7.47425763902341E-10"
+        iyy="0.00132611093813923"
+        iyz="-1.23979965317765E-08"
+        izz="0.00147758149592174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_bogie.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_bogie.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rocker_to_bogie"
+    type="continuous">
+    <origin
+      xyz="2.63771809203281 0.42018326822563 -1.17046699823171"
+      rpy="0 0 0.00708892913797644" />
+    <parent
+      link="left_rocker" />
+    <child
+      link="left_bogie" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_front">
+    <inertial>
+      <origin
+        xyz="-0.0090609952026921 -0.0282472262167399 -0.101198405920529"
+        rpy="0 0 0" />
+      <mass
+        value="0.984700202432668" />
+      <inertia
+        ixx="0.00201654345075244"
+        ixy="-0.000109327083824658"
+        ixz="1.31986921756132E-05"
+        iyy="0.00169995942513083"
+        iyz="4.47178894633139E-05"
+        izz="0.00111748161524583" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bogie_to_front"
+    type="fixed">
+    <origin
+      xyz="0.215420027178198 -0.203893954501996 -0.161499999999192"
+      rpy="-3.14159265358935 0 -0.347551310992827" />
+    <parent
+      link="left_bogie" />
+    <child
+      link="left_front" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_front_wheel">
+    <inertial>
+      <origin
+        xyz="-4.15813872887139E-05 8.72209776181521E-06 0.00232056241112288"
+        rpy="0 0 0" />
+      <mass
+        value="0.911975447556342" />
+      <inertia
+        ixx="0.00433350012733774"
+        ixy="1.30282817456608E-08"
+        ixz="2.51190680234649E-08"
+        iyy="0.00433349182612928"
+        iyz="1.83304483959681E-08"
+        izz="0.00705740745246957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0.858525155785996" />
+    <parent
+      link="left_front" />
+    <child
+      link="left_front_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_middle">
+    <inertial>
+      <origin
+        xyz="-0.00772152249504865 -0.0286429728655598 -0.101198400038664"
+        rpy="0 0 0" />
+      <mass
+        value="0.984700191454108" />
+      <inertia
+        ixx="0.00202296173998039"
+        ixy="-9.93989986102843E-05"
+        ixz="1.3242890821538E-05"
+        iyy="0.00169354112397644"
+        iyz="4.47533049999543E-05"
+        izz="0.0011174816249343" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_middle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_middle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_bogie_to_middle"
+    type="fixed">
+    <origin
+      xyz="-0.286461854062516 -0.190525033440399 -0.161500000000126"
+      rpy="-3.14159265358935 0 -0.347551310992871" />
+    <parent
+      link="left_bogie" />
+    <child
+      link="left_middle" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_middle_wheel">
+    <inertial>
+      <origin
+        xyz="-4.15813873553272E-05 8.72209784663625E-06 0.00232056241112577"
+        rpy="0 0 0" />
+      <mass
+        value="0.911975447556327" />
+      <inertia
+        ixx="0.00433350012733773"
+        ixy="1.30282818173246E-08"
+        ixz="2.51190686647742E-08"
+        iyy="0.00433349182612915"
+        iyz="1.83304483850796E-08"
+        izz="0.00705740745246946" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_middle_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_middle_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_middle_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0.699300464127683" />
+    <parent
+      link="left_middle" />
+    <child
+      link="left_middle_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_rear">
+    <inertial>
+      <origin
+        xyz="-0.00753898041950563 -0.0301681728303583 -0.101202571046475"
+        rpy="0 0 0" />
+      <mass
+        value="1.00010048823147" />
+      <inertia
+        ixx="0.00203113945682491"
+        ixy="-9.09814090441685E-05"
+        ixz="1.5327739408665E-05"
+        iyy="0.00171141337078556"
+        iyz="4.34814787168556E-05"
+        izz="0.00114006960607522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_rear.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_rear.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rocker_to_rear"
+    type="fixed">
+    <origin
+      xyz="1.91229634516248 0.232146570056845 -1.31281574342478"
+      rpy="-3.14159265358946 0 -0.275906441277532" />
+    <parent
+      link="left_rocker" />
+    <child
+      link="left_rear" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_rear_wheel">
+    <inertial>
+      <origin
+        xyz="-4.15813893461792E-05 8.72209708058236E-06 0.00232056241112466"
+        rpy="0 0 0" />
+      <mass
+        value="0.911975447556332" />
+      <inertia
+        ixx="0.00433350012733774"
+        ixy="1.3028281812769E-08"
+        ixz="2.51190691343233E-08"
+        iyy="0.00433349182612919"
+        iyz="1.83304484198715E-08"
+        izz="0.00705740745246952" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_rear_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/left_rear_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0.636177629456517" />
+    <parent
+      link="left_rear" />
+    <child
+      link="left_rear_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_bar_to_rocker_part">
+    <inertial>
+      <origin
+        xyz="0.0027325888668881 0.0831906572490931 -0.0280994069330528"
+        rpy="0 0 0" />
+      <mass
+        value="0.308748627193075" />
+      <inertia
+        ixx="0.000446507295907767"
+        ixy="-1.25314722090995E-05"
+        ixz="1.01746285182487E-06"
+        iyy="6.54120568835812E-05"
+        iyz="3.09755354748057E-05"
+        izz="0.000470289309245848" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_bar_to_rocker_part.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_bar_to_rocker_part.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_bar_to_rocker_part"
+    type="continuous">
+    <origin
+      xyz="2.40254782084161 0.594552973540831 0.480446093955982"
+      rpy="1.5707963267949 -0.509027810384565 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_bar_to_rocker_part" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_rocker">
+    <inertial>
+      <origin
+        xyz="2.34643853311514 0.438139985875483 -0.582650304965621"
+        rpy="0 0 0" />
+      <mass
+        value="0.737544718103938" />
+      <inertia
+        ixx="0.000591741128773476"
+        ixy="-0.00111330230843845"
+        ixz="0.000402541844146693"
+        iyy="0.00570759748254399"
+        iyz="0.000120389662982498"
+        izz="0.00604485187841453" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_rocker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_rocker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_bar_to_rocker_to_right_rocker"
+    type="fixed">
+    <origin
+      xyz="-2.41208421327916 -0.430016544651362 0.594552973540831"
+      rpy="0 0 -0.0209476881593108" />
+    <parent
+      link="right_bar_to_rocker_part" />
+    <child
+      link="right_rocker" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_bogie">
+    <inertial>
+      <origin
+        xyz="-0.019929533157355 -0.0325479043467601 -0.0209593529062523"
+        rpy="0 0 0" />
+      <mass
+        value="0.43990576066683" />
+      <inertia
+        ixx="0.000256317299794027"
+        ixy="-7.73170052505528E-05"
+        ixz="7.38788938717426E-10"
+        iyy="0.00131999900583864"
+        iyz="1.23988144106525E-08"
+        izz="0.00147676429447227" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_bogie.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_bogie.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rocker_to_bogie"
+    type="continuous">
+    <origin
+      xyz="2.63628092293658 0.414829772803047 -0.515685209774159"
+      rpy="0 0 -0.488080122225254" />
+    <parent
+      link="right_rocker" />
+    <child
+      link="right_bogie" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_front">
+    <inertial>
+      <origin
+        xyz="-0.00772095536529127 -0.0286425197716159 -0.101198400044725"
+        rpy="0 0 0" />
+      <mass
+        value="0.984700190697898" />
+      <inertia
+        ixx="0.00202295937794559"
+        ixy="-9.93984690776743E-05"
+        ixz="1.31987274542782E-05"
+        iyy="0.00169354348541162"
+        iyz="4.47180111132429E-05"
+        izz="0.00111748161412814" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front"
+    type="fixed">
+    <origin
+      xyz="0.215785375587514 -0.203507259021123 0.0765462609250908"
+      rpy="0 0 -2.91364691374163" />
+    <parent
+      link="right_bogie" />
+    <child
+      link="right_front" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_front_wheel">
+    <inertial>
+      <origin
+        xyz="-4.15813950680466E-05 8.72210229807546E-06 0.00232056242183581"
+        rpy="0 0 0" />
+      <mass
+        value="0.911975447964754" />
+      <inertia
+        ixx="0.00433350012751831"
+        ixy="1.30282818670705E-08"
+        ixz="2.51190414435252E-08"
+        iyy="0.0043334918263162"
+        iyz="1.8330368239632E-08"
+        izz="0.00705740745247098" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0.188763213719474" />
+    <parent
+      link="right_front" />
+    <child
+      link="right_front_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_middle">
+    <inertial>
+      <origin
+        xyz="-0.00909825232196759 -0.0283795775743039 -0.101224880231788"
+        rpy="0 0 0" />
+      <mass
+        value="0.987119607435848" />
+      <inertia
+        ixx="0.00201694898932086"
+        ixy="-0.000109439332842155"
+        ixz="1.31986913632115E-05"
+        iyy="0.0017000175120106"
+        iyz="4.4717886155626E-05"
+        izz="0.00111792023961772" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_middle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_middle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_middle"
+    type="fixed">
+    <origin
+      xyz="-0.286119676303167 -0.191038511908769 0.0765462609241698"
+      rpy="0 0 -2.91364691374163" />
+    <parent
+      link="right_bogie" />
+    <child
+      link="right_middle" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_middle_wheel">
+    <inertial>
+      <origin
+        xyz="-4.15813948939636E-05 8.72210195879131E-06 0.00232056242241629"
+        rpy="0 0 0" />
+      <mass
+        value="0.911975447986274" />
+      <inertia
+        ixx="0.004333500127529"
+        ixy="1.30282823203754E-08"
+        ixz="2.51190287856415E-08"
+        iyy="0.00433349182632662"
+        iyz="1.83303758752248E-08"
+        izz="0.00705740745247123" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_middle_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_middle_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_middle_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0.014230288520328" />
+    <parent
+      link="right_middle" />
+    <child
+      link="right_middle_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_rear">
+    <inertial>
+      <origin
+        xyz="-0.0100416703680366 -0.0294299351766889 -0.101202567027641"
+        rpy="0 0 0" />
+      <mass
+        value="1.00010060346169" />
+      <inertia
+        ixx="0.00201990423650742"
+        ixy="-0.00010836821557808"
+        ixz="1.07229346760883E-05"
+        iyy="0.00172264566793048"
+        iyz="4.48406533227325E-05"
+        izz="0.00114006866529997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_rear.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_rear.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear"
+    type="fixed">
+    <origin
+      xyz="1.90675517671105 0.243404289621995 -0.45829020365838"
+      rpy="0 0 -2.86662871653517" />
+    <parent
+      link="right_rocker" />
+    <child
+      link="right_rear" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_rear_wheel">
+    <inertial>
+      <origin
+        xyz="-4.1581381166278E-05 8.72209309261962E-06 0.00232056239958517"
+        rpy="0 0 0" />
+      <mass
+        value="0.911975447117928" />
+      <inertia
+        ixx="0.00433350012714164"
+        ixy="1.30282807228306E-08"
+        ixz="2.51191241354201E-08"
+        iyy="0.00433349182592735"
+        iyz="1.83305102794147E-08"
+        izz="0.00705740745246768" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_rear_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/right_rear_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -0.695400956110486" />
+    <parent
+      link="right_rear" />
+    <child
+      link="right_rear_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="diff_bar">
+    <inertial>
+      <origin
+        xyz="-5.72836668508714E-05 0.0161985685036556 3.46965441455627E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.482448636050748" />
+      <inertia
+        ixx="0.00192856887675019"
+        ixy="6.71351139864318E-07"
+        ixz="-2.06325799274867E-05"
+        iyy="0.00197110245167036"
+        iyz="3.12121496163515E-07"
+        izz="0.000129518252975519" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/diff_bar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eg_rover_description_6/meshes/diff_bar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_diff_bar"
+    type="revolute">
+    <origin
+      xyz="2.3355 0.88555 0.69756"
+      rpy="1.5718 -0.0013808 0.071977" />
+    <parent
+      link="base_link" />
+    <child
+      link="diff_bar" />
+    <axis
+      xyz="0.015141 0.99989 0" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
