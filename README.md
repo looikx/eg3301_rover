@@ -6,7 +6,6 @@ This is a ROS2 (Humble) Version for the Endeavour Rover. The repository specific
 
 
 
-
 ## Usage 
 
 `ros2 launch eg_rover_description_6 display.launch.xml`
